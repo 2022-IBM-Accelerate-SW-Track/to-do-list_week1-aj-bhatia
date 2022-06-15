@@ -40,16 +40,64 @@ export default class About extends Component {
           <div class="profilePic">
             <img class="pic" src={ProfilePic} alt="Profile Pic"/>
           </div>
+
           <div class="cards">
-            <div class="career">
-              {/* make a card thingy here */}
-              Career:
+            <div class="career card">
+              <div class="card-header">
+                Career:
+              </div>
+              <div class="card-content">
+                <div class="bullet">
+                  Software & Data Intern at HPE
+                </div>
+                <div class="bullet">
+                  Accelerate '22 at IBM, Software Track
+                </div>
+                <div class="bullet">
+                  Studying CS at UC Santa Cruz
+                </div>
+                <div class="bullet">
+                  Full-stack development
+                </div>
+              </div>
             </div>
-            <div class="personal">
-              Personal Intertests:
+            <div class="personal card">
+              <div class="card-header">
+                Personal Intertests:
+              </div>
+              <div class="card-content">
+                <div class="bullet">
+                  Cooking and trying weird foods
+                </div>
+                <div class="bullet">
+                  Traveling and seeing new places
+                </div>
+                <div class="bullet">
+                  Exercising and running            
+                </div>
+                <div class="bullet">
+                  Building keyboards
+                </div>
+              </div>
             </div>
-            <div class="activites">
-              Clubs & Activities:
+            <div class="activites card">
+              <div class="card-header">
+                Clubs & Activities:
+              </div>
+              <div class="card-content">
+                <div class="bullet">
+                  Guayaki Ambassador
+                </div>
+                <div class="bullet">
+                  Fish Rap Live! Satire News Paper
+                </div>
+                <div class="bullet">
+                  UCSC Valorant Team Captain
+                </div>
+                <div class="bullet">
+                  CruzHacks Logistics Organizer
+                </div>
+              </div>
             </div>
           </div>
         </div>
