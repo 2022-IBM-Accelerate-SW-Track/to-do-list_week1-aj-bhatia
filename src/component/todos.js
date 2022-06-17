@@ -1,5 +1,7 @@
 import React from "react";
-import "../component/todos.css";
+import {Card, CardContent, CardActionArea, Grid, ListItemButton, ListItemText, Checkbox, Typography, CardMedia} from "@mui/material";
+import "./todos.css";
+import PartyPic from "../assets/keithParty.png";
 
 // 1. This component formats and returns the list of todos.
 // 2. Treat the question mark like an if statement.
@@ -12,24 +14,46 @@ const Todos = ({ todos }) => {
     const todoList = todos.length ? (
       todos.map((todo) => {
         return (
-          <Grid key={todo.id}>
-            <Card>
-              {/* Remember, we set the local state of this todo item when the user submits the form in 
-              AddTodo.js. All we need to do is return the todo list item */}
-              <CardContent>
-                <span style={{ padding: "50px" }}>add todo content</span>
-              </CardContent>
+            <Card variant="outlined" sx={{ width: 1/4, maxWidth: 400 }}>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  height="140"
+                  image={ PartyPic }
+                />
+                <CardContent style={{ padding: "16px" }}>
+                  <Typography style={{ fontFamily: "Montserrat"}}>
+                    {todo.content}
+                  </Typography>
+                  <Typography style={{ fontFamily: "Montserrat"}}>
+                    
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
             </Card>
-          </Grid>
         );
       })
     ) : (
-      <p>{/*Enter your message here if todo list is empty*/}</p>
+      <Card variant="outlined" sx={{ maxWidth: 400 }}>
+        <CardActionArea>
+          <CardMedia
+            component="img"
+            height="140"
+            image={ PartyPic }
+          />
+          <CardContent style={{ padding: "16px" }}>
+            <Typography style={{ fontFamily: "Montserrat"}}>
+              Congrats!
+              You've Completed Everything!
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Card>
     );
     // Lastly, return the todoList constant that we created above to show all of the items on the screen.
     return (
       <div className="todoCollection" style={{ padding: "10px" }}>
-        {/*call todo list here*/}
+        {todoList}
       </div>
     );
 };
